@@ -22,6 +22,8 @@ The biological and environmental sciences have been rapidly and fundamentally re
 * **Time:** 8:00 AM to 5:00 PM (there will be a 1-hour lunch break)
 * **Place:** Kentucky International Convention Center - Room L007
 
+***
+
 ## Schedule
 
 Times are approximate.
@@ -45,6 +47,8 @@ Times are approximate.
 ### Hands-on lesson development (2:30 PM to 4:30 PM)
 
 ### Wrap-up (4:30 PM to 5:00 PM)
+
+***
 
 ## Additional Resources
 
