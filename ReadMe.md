@@ -1,14 +1,10 @@
-## Simple site: Easy websites with GitHub pages
+## ESA 2019 BEDENet Workshop
 
-[Github Pages](https://pages.github.com) provide a simple way to make a
-website using Markdown and git.
+A simple website for the BEDENet workshop to be held at ESA in 2019.
 
-This is a minimal tutorial to get started.
-
-View the thing [here](https://kbroman.org/simple_site).
 
 ---
-
+<!---
 To the extent possible under law,
 [Karl Broman](https://github.com/kbroman)
 has waived all copyright and related or neighboring rights to
@@ -16,3 +12,4 @@ has waived all copyright and related or neighboring rights to
 This work is published from the United States.
 <br/>
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+--->
