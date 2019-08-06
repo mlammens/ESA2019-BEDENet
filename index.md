@@ -28,23 +28,39 @@ The biological and environmental sciences have been rapidly and fundamentally re
 
 Times are approximate.
 
-### Gathering and introductions (8:00 AM to 9:00 AM)
+### Settle in and meet one another (8:00 AM to 8:30 AM)
 
-### Fundementals of data science that are important for undergraduate students (9:00 AM to 9:30 AM)
+* Participant introductions
+
+### Introduction to the workshop
+
+* Brief Introduction to BEDE Network: Rationale and Goals
+* Context: The need for data science education in Biology and Environmental Science
+* Method: Backwards Design
+* Rationale: Data science, Inclusivity, and Empowerment
+
+### Data science for undergraduate biology and environmental science (9:00 AM to 9:30 AM)
+
+* Activity: What is Data Science?
+* Short Presentation: Data Science Fundamentals
 
 ### Methods and tools for teaching data science in your classroom (9:30 AM to 12:00 Noon)
 
-* Data visualization by hand
-* Introduction to R and RStudio
-* Introduction to Markdown and RMarkdown
+* Activity: Speed Data Science
+* **Lesson 1:** Introduction to R/RStudio for Instructors
+* **Lesson 2:** Using Markdown/RMarkdown in the classroom
 
 ### Lunch Break (12:00 Noon to 1:00 PM)
 
-### Analysis of a data science lesson (1:00 PM to 1:30 PM)
+### Development of data science lessons (1:00 PM to 2:30 PM)
 
-### Crash course in git and GitHub (1:30 PM to 2:30 PM)
+* Our materials are now your materials too
+* **Lesson 3:** Basics of Github for reproducibility and sharing
 
 ### Hands-on lesson development (2:30 PM to 4:30 PM)
+
+* Start developing a lesson of your own
+* Individually or in small groups - use the tools you want to practice
 
 ### Wrap-up (4:30 PM to 5:00 PM)
 
