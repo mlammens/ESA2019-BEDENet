@@ -37,3 +37,16 @@ The data are below.
 | 3/29/18 | wet       | wetland_bot | 5         | 6.7 | 10             | 5                 |
 
 **With the limited information you have been given, come up with three different plots to visualize relationships in these data, and speculate as to how they may be useful to Marisa in answering her overall question.**
+
+***
+
+## Instructor's Notes
+
+This activity can be used at the beginning of biostats course to get students to start thinking about how data can be **visualized**. Ideally, the instructor would give fairly vague advise, perhaps sketching very simplistic plots and figures, so the students can explore visualization *naively*.
+
+After each group has worked on a set of visualizations and assessment of their potential utility, individual group discussions, a whole class discussion, or group presentations can follow. After this discussion, the instructor could offer some visualizations that were not presented (e.g., box plots), going over the information they convey.
+
+### Learning Outcomes
+
+* Students should be introduced to different ways to convey quantitative and categorical data. These could include bar plots, scatter plots, histograms, and box plots.
+* Students should be introduced to how information is summarized and conveyed by a data visualization.
