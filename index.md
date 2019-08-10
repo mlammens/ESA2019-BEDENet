@@ -46,7 +46,7 @@ Times are approximate.
 
 ### Methods and tools for teaching data science in your classroom (9:30 AM to 12:00 Noon)
 
-* Activity: Speed Data Science
+* Activity: [Speed Data Science](docs/ESA2019-Speed-Data-Science-Activity.html)
 * **Lesson 1:** Introduction to R/RStudio for Instructors
 * **Lesson 2:** Using Markdown/RMarkdown in the classroom
 
