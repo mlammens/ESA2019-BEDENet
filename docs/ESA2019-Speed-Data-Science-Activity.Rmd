@@ -55,3 +55,9 @@ After each group has worked on a set of visualizations and assessment of their p
 
 * Did each group come up with visualizations that were useful at summarizing and conveying information?
 * Did students evaluate their peers work in a way that conveys understanding of different ways to visualize data? (Use [peer-eval.docx](https://mlammens.github.io/ESA2019-BEDENet/blob/gh-pages/docs/peer-eval.docx) tool.)
+
+### Learning Activities
+
+* Group data visualizations / posters.
+* Individual peer evaluations of other groups posters.
+* Group / class discussion.
