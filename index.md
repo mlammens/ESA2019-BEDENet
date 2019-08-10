@@ -3,8 +3,11 @@ layout: page
 title: Bringing computational data sciences to your undergraduate ecology classroom
 tagline: ESA 2019 BEDENet Workshop
 description: Simple page for ESA 2019 BEDENet workshop
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 ---
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
 
 ## Synopsis
 
