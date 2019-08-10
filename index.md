@@ -70,12 +70,9 @@ Times are approximate.
 
 ## Additional Resources
 
-<!---
-- [Overview](pages/overview.html)
-- [Making an independent website](pages/independent_site.html)
-- [Making a personal site](pages/user_site.html)
-- [Making a site for a project](pages/project_site.html)
-- [Making a jekyll-free site](pages/nojekyll.html)
-- [Testing your site locally](pages/local_test.html)
-- [Resources](pages/resources.html)
---->
+* DataOne best practices [https://www.dataone.org/best-practices](https://www.dataone.org/best-practices)
+* Lessons learned from teaching Data Science [https://www.dataschool.io/teaching-data-science/](https://www.dataschool.io/teaching-data-science/)
+* A guide to teaching data science [https://arxiv.org/ftp/arxiv/papers/1612/1612.07140.pdf](https://arxiv.org/ftp/arxiv/papers/1612/1612.07140.pdf)
+* 10 steps to teaching data science well [https://towardsdatascience.com/10-steps-to-teaching-data-science-well-322966188323](https://towardsdatascience.com/10-steps-to-teaching-data-science-well-322966188323)
+
+
