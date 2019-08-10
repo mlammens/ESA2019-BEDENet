@@ -5,9 +5,7 @@ tagline: ESA 2019 BEDENet Workshop
 description: Simple page for ESA 2019 BEDENet workshop
 ---
 
-<head>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-</head>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
 ## Synopsis
 
