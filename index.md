@@ -36,7 +36,7 @@ Times are approximate.
 
 ### Introduction to the workshop
 
-* Brief Introduction to BEDE Network: Rationale and Goals
+* [Brief Introduction to BEDE Network: Rationale and Goals](docs/ESA_BEDE_Workshop_Intro.pptx)
 * Context: The need for data science education in Biology and Environmental Science
 * Method: Backwards Design
 * Rationale: Data science, Inclusivity, and Empowerment
