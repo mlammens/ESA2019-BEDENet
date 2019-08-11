@@ -57,7 +57,7 @@ Times are approximate.
 ### Development of data science lessons (1:00 PM to 2:30 PM)
 
 * Our materials are now your materials too
-* **Lesson 3:** Basics of GitHub for reproducibility and sharing
+* **Lesson 3:** [Basics of GitHub for reproducibility and sharing](docs/ESA2019-Basics-Github.html)
 
 ### Hands-on lesson development (2:30 PM to 4:30 PM)
 
