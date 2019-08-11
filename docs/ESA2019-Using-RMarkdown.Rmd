@@ -1,0 +1,109 @@
+---
+title: "Using Markdown/RMarkdown"
+output:
+  html_document:
+    toc: yes
+---
+
+## R Markdown
+
+Using [R Markdown](https://rmarkdown.rstudio.com/), we can integrate descriptive text, R code, and the output from that code, into a seamless document that can be easily **reproduced**.
+Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. 
+While some of the details of using Markdown (and thus R Markdown) can get tricky, the basics are very easy to pickup.
+RStudio even comes with two very useful tools to learn and use Markdown. 
+First, got to the `Help` tab and select `Markdown Quick Reference`.
+Second, a more detailed reference can be found in the `Help` -> `Cheatsheets` section.
+
+### Markdown vs R Markdown
+
+R Markdown is a tool that allows you to make a simple text document using the Markdown formatting syntax **with** R code and associated output embedded. 
+
+### Starting with R Markdown
+
+To start of this lesson, go to the new file button (upper left corner of the RStudio interface, or `File` -> `New File`) and choose the R Markdown option. 
+A screen will pop-up requesting information such as Title, Author, and Output Format. Give your new doc a title and select **HTML** as the output format.
+A new file that is pre-populated with a bunch of text will open in the `Source` panel.
+
+We will go over each section briefly:
+
+* Header
+* Sections
+* Code Chunks
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. Click **Knit** now to see what happens.
+
+
+## Building a report using soil nutrient data
+
+Let's work together to build a simple report for our Soil Nutrient data set. 
+First, write some text describing that you are going to read in the data set. 
+Next, go to a new line and click the "Insert" button at the top of the Source panel, then select "R"
+This will create what is called a **code chunk**. 
+
+**Your R code must be embedded within code chunks.**
+
+Let's make a chunk to add the soil data set.
+
+
+```{r soil_data}
+soil_data <- read.csv("https://mlammens.github.io/ESA2019-BEDENet/docs/soil_nutrient_data.csv")
+```
+
+You can execute the R code above by either using one of the "Run" functions (look in the upper-right corner of the editor pane), clicking the little green arrow in the upper right corner of the code chunk (note, this will run all code in the chunk), or by pressing CMD + ENTR (Mac) or CNTR + ENTR (Windows) while your cursor is on the line you wish to execute.
+
+Now let's make another chunk that calls the `summary` function on our data set.
+
+```{r}
+summary(soil_data)
+```
+
+Before we go on, **Knit** your new report.
+
+
+#### Challenge - Calculating mean and standard deviation
+
+Using what you have learned during our earlier lesson, write code in an R chunk to calculate the mean (function `mean`) and standard deviation (function `sd`) for the pound of phosphorus per acre (phosphorus_lbacre) values **for each site**. 
+At the end of this chunk, you should have calculated **five** different mean and standard deviation values.
+
+```{r}
+# Mean phosphorus at Townhouse site
+mean(soil_data$phosphorus_lbacre[1:5])
+```
+
+
+#### Challenge - Data visualization
+
+Using what you have learned during our earlier lesson, write code in an R chunk to create a visual summary of these data.
+
+```{r}
+hist(soil_data$pH, breaks = 10)
+```
+
+
+Once you have completed these two tasks, **Knit** your document.
+
+## Additional Resources
+
+* [Software Carpentry Lesson on R Markdown](http://swcarpentry.github.io/r-novice-gapminder/15-knitr-markdown/index.html)
+
+***
+
+## Instructor's Notes
+
+This is a brief introduction to R Markdown documents. 
+The intention is to get students up and running with R Markdown so they can create reproducible data reports in your classroom, however much of their learning about R Markdown will be hands on as they work through assignments.
+
+### Learning Outcomes
+
+By the end of this lesson, students should be able to:
+
+* Create a new R Markdown file
+* Successfully **Knit** a document such that the text, code, and output are appropriately formatted.
+
+### Assessment
+
+The outcomes of this activity will be assessed based on student's ability to create a R Markdown document and knit that document successfully into a new HTML report.
+
+### Learning Activity
+
+Depending on the level of the class, this can be as free-form as currently presented or more structured.

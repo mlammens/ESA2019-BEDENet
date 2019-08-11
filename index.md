@@ -50,7 +50,7 @@ Times are approximate.
 
 * Activity: [Speed Data Science](docs/ESA2019-Speed-Data-Science-Activity.html)
 * **Lesson 1:** [Introduction to R/RStudio for Instructors](docs/ESA2019-Intro-to-RStudio.html)
-* **Lesson 2:** Using Markdown/RMarkdown in the classroom
+* **Lesson 2:** [Using Markdown/RMarkdown in the classroom](docs/ESA2019-Using-RMarkdown.html)
 
 ### Lunch Break (12:00 Noon to 1:00 PM)
 
