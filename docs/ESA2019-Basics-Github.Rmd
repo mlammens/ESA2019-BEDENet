@@ -1,0 +1,76 @@
+---
+title: "ESA2019-Basics of GitHub for reproducibility and sharing"
+output: html_document
+---
+
+## Learning Outcomes
+
+At the end of this session you should be able to:
+
+* Describe the differences between Git and GitHub
+* Initiate a new Git repository using R Studio
+* Work with the R Studio Git interface to commit a change to a simple text file to a repository
+* Work with the GitHub interface to make a change to a simple text file
+
+## Introducing Git and GitHub
+
+Git and GitHub are all about version control. 
+In and of itself, version control should be fairly intuitive.
+
+**See example of version control in Google Docs.**
+
+Git is a version control software that is ideal for tracking changes to simple text files (i.e., your R code, your R Markdown files, CSV files, etc.). Once you've installed it on your computer, Git is a way to do version control on your files **on your computer**.
+
+[GitHub](https://github.com) is website that provides hosting services for your Git repositories. 
+This makes it easier to collaborate among multiple people on the same project. (Though this utility does have a fairly steep learning curve.)
+
+## Git in R Studio
+
+To 'standardize' things among all of us today, let's all work in [R Studio Cloud](https://rstudio.cloud).
+Login to R Studio Cloud using your GitHub account.
+
+* Begin by creating a 'New Project'.
+* Once the project is created, rename it.
+* Next, select 'Tools' -> 'Version Control' -> 'Project Setup'
+* Under 'Version control system', select 'Git'. You will be prompted about wanting to "initialize a new git repository", say yes. If you need to restart R Studio, do so at this time.
+
+After you complete the steps above, you should notice a new tab, labeled 'Git', in the upper-right panel on your R Studio Server interface. Select that tab.
+
+Now, let's create a simple text file using R Studio. Got to the new file button and select 'Text File'
+
+* Write some text and save it as 'ESA2019-DataSci.md'.
+* Note that the file name appeared in the 'Git' window.
+* Go to the 'Git' window, select the file under the column labeled 'Staged'.
+* Press the 'Commit' button. (**NOTE** - You may have to turn off any pop-up blockers you have on.)
+* In the upper-right of the new window that just popped up, you will see a box labeled 'Commit message'. Here is where you can write a little note to yourself (or others) about what this version is. Write a note and press 'Commit'
+
+At this point you will get an error message. Before moving on, you need to tell Git "who you are".
+
+* In the lower-left panel of the R Studio Cloud interface, select the 'Terminal' tab. 
+* At terminal command prompt, execute each of the lines below, changing the email and name to be appropriate for you.
+
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
+* Now, go back and try committing your edits to `temp.md` again.
+
+Congratulations! You have just made your first commit using Git.
+
+## Tracking changes
+
+OK, let's make some changes to that text file. Add some more text. Note that once you save the changes, the file name pops up in the Git panel again (now with a little blue M next to it, rather than ?).
+
+* Select the file in the 'Staged' column, and this time press **'Diff'** instead of 'Commit'.
+* This view now shows you differences between the two versions of your text file.
+* Write a commit message, and commit these changes.
+
+OK, we've made two commits now. Without selecting (i.e., 'Staging') any files, select the 'Diff' button again. Now, in the pop-up window, go to the upper-left and select 'History'. In this view, you will be able to navigate the history of the changes you have made.
+
+#### Challenge - Track another new file
+
+Make another new file (text file, R script, Rmd file, etc.) and commit that file to the repository. Then, make some edits to the file, and commit those changes as well.
+
+**Note:** if you try to create a new R Markdown file, you may need to update packages and/or allow R Studio to restart.
+
