@@ -1,0 +1,464 @@
+---
+title: "Introduction to R/RStudio"
+output:
+  html_document:
+    code_folding: hide
+    toc: yes
+---
+
+## Learning Outcomes
+
+At the end of this session you should be able to:
+
+* Perform basic arithmetic using R/RStudio
+* Identify the major components of the RStudio interface
+* Create an R script file and use it to document a sequence of R functions
+* Read in a data set and perform basic data summary procedures in R
+
+## Getting started
+
+For this session, you can either work in RStudio on your own computer (if you have RStudio installed) or you can work in an RStudio Cloud session. 
+To start an RStudio Cloud session go to [https://rstudio.cloud/](https://rstudio.cloud/) and log in using your GitHub account.
+
+### Difference between R and RStudio
+
+In this session, we will be working primarily in RStudio.
+So what is the difference between R and RStudio?
+R is a programming language (specifically a statistical analysis programming language), while RStudio is an **Integrated Development Environment**, or **IDE**. 
+You can think of it as a interface with R that aids the analyst.
+RStudio offers a number of features, mostly related to visual presentation of information, that make writing and working with R code easier.
+
+### Overall layout
+
+There are four panels in the RStudio interface (though you may only have three open when you first start it), each has valuable information.
+
+* Console / Terminal panel (lower-left)
+* Environment / History / Git (upper-right)
+* Files / Plots / Packages / Help (lower-right)
+* Source / Editor (upper-left)
+
+### File management
+
+Good file management is important in data science. We'll start working on this now.
+
+* Make a `ESA-2019-DataSci` directory / folder
+* Make a `data` directory / folder within `ESA-2019-DataSci`
+* Make a `scripts` directory / folder within `ESA-2019-DataSci`
+* In RStudio, set working directory to your new ``ESA-2019-DataSci`` directory
+
+#### Setting your working directory
+
+Point-and-click method - Use 'Session' > 'Set Working Directory' > 'Choose Directory'.
+
+Using the R Console:
+
+```{r, eval=FALSE}
+setwd("/Users/maiellolammens/ESA-2019-DataSci/")
+```
+
+
+### Getting help
+
+* **Help** panel (lower right corner)
+* `help.search`
+
+```{r}
+help.search("bar plot")
+```
+
+#### Challenge
+
+Use the `help.search` function to search for something in statistics that you think should be in R? Did you find anything?
+
+* I know my function - just give me the details - `?barplot`
+
+
+## R as calculator
+
+We can use R just like any other calculator.
+
+```{r}
+3 + 5
+```
+
+There's internal control for order of operations (Please Excuse My Dear Aunt Sally)
+
+```{r}
+(3 * 5) + 7
+```
+
+```{r}
+3 * 5 + 7
+```
+
+#### Challenge
+
+Write an example where adding parentheses matters.
+
+### Internal functions
+
+There are a ton of internal functions, and a lot of add-ons.
+
+```{r}
+sqrt(4)
+
+abs(-5)
+
+sqrt(-5)
+```
+
+## R script file
+
+Use a script file for your work. It's easier to go back to and easy to document.
+
+**Important:** within an R file, you can use the # sign to add comments. Anything written after the # is **not** interpreted when you run the code.
+
+#### Challenge
+
+Create a new R script file in your `scripts` directory.
+
+### Basic file managment in R
+
+```{r}
+# What working directory am I in?
+getwd()
+
+# Move to a different director?
+setwd(".")
+```
+
+#### Additional file management points
+
+* Navigating the file path
+* Tab completion of file paths
+* Tab completion of R commands
+
+#### Challenge
+
+* Try to auto-complete `fil`, what do you find?
+* Use the brief help menu that comes up to find a function that starts with `file`, and describe what you think it does.
+
+
+## Variables and objects
+
+There are several basic types of data structures in R.
+
+* **VECTORS**: One-dimensional arrays of numbers, character strings, or logical values (T/F)
+* **FACTORS**: One-dimensional arrays of factors (Stop - Let's discuss factors)
+* **DATA FRAMES**: Data tables in which the various columns may be of different type
+* **MATRICES**: In R, matrices can only be 2-dimensional, anything higher dimension is called an array (see below). Matrix elements are numerical; some functions, like the transpose function t(), only work on matrices
+* **ARRAYS**: higher dimensional matrices are called arrays in R
+* **LISTS**: lists can contain any type of object as list elements. You can have a list of numbers, a list of matrices, a list of characters, etc., or any combination of the above.
+
+### Functions that are useful for understanding the different types of data structures
+
+These functions will tell you what *kind* of variable you are dealing with, as well as some additional information which may be useful as you advance in your use of R.
+
+```
+str()
+class()
+```
+
+## Practice with variables
+
+Let's define a variable.
+
+```{r}
+my_var <- 8
+```
+
+And another
+
+```{r}
+my_var2 <- 10
+```
+
+Work with vars
+
+```{r}
+my_var + my_var2
+```
+
+Make a new variable
+
+```{r}
+my_var_tot <- my_var + my_var2
+```
+
+#### Challenge
+
+Change the value of my_var2
+
+```{r}
+my_var2 <- 3
+```
+
+What is the value of `my_var_tot` now?
+
+### Make a vector
+
+Let's combine multiple values into a vector of length greater than 1.
+
+```{r}
+# Vector of variables
+my_vect <- c(my_var, my_var2)
+
+# Numeric vector
+v1 <- c(10, 2, 8, 7, 11, 15)
+
+# Char vector
+pets <- c("cat", "dog", "rabbit", "pig")
+```
+
+Making a vector of numbers in sequence
+
+```{r}
+v2 <- 1:10
+v3 <- seq(from = 1, to = 10)
+```
+
+#### Challenge
+
+1. Look up the help for the `seq` function, and use this to make a vector from 1 to 100, by steps of 5.
+2. Come up with a way that you would use the `length.out` argument.
+
+## Exploring variable elements
+
+You can get specific elements from vectors and other data structures
+
+* Introduction to the square brackets `[]`
+
+```{r}
+pets <- c("cat", "dog", "rabbit", "pig", "snake")
+pets[1]
+```
+
+* Getting a number of elements, in sequence
+
+```{r}
+pets[3:4]
+```
+
+* Getting a number of elements, not in sequence
+
+```{r}
+pets[c(1,4)]
+```
+
+
+## Working with matrices
+
+**Review** - Why might we want 2D data?
+
+Let's make a matrix
+
+#### Challenge
+
+With the people next to you, break down this function, and describe each argument.
+What is the final product?
+
+```{r}
+my_mat <- matrix(data = runif(50), nrow = 10, byrow = TRUE)
+```
+
+What does it mean to fill `byrow`?
+
+```{r}
+matrix(data = 1:9, nrow = 3, byrow = TRUE)
+```
+
+Versus
+
+```{r}
+matrix(data = 1:9, nrow = 3, byrow = FALSE)
+```
+
+#### Challenge
+
+What is the default value for `byrow`?
+
+### Indexing matrices
+
+Indexing happens by **row**, **column** notation.
+
+```{r}
+my_mat <- matrix(data = 1:50, nrow = 10, byrow = TRUE)
+
+my_mat[1,1]
+my_mat[1,2]
+my_mat[2,1]
+
+my_mat[1:4, 1:3]
+
+my_mat[c(1,3,5), ]
+my_mat[ ,c(1,3,5)]
+```
+
+## Combinining internal functions with matrices
+
+Make a "random" matrix (that isn't random in this case because of the `set.seed` function)
+
+```{r}
+set.seed(1)
+mat1 <- matrix(data = runif(50), nrow = 10, byrow = TRUE)
+```
+
+Calculate the mean of all of the data
+
+```{r}
+mean(mat1)
+```
+
+Calculate the standard deviation of all of the data
+
+```{r}
+sd(mat1)
+```
+
+Calculate row means and column means
+
+```{r}
+rowMeans(mat1)
+colMeans(mat1)
+```
+
+Introduce the `apply` function
+
+```{r}
+apply(mat1, MARGIN = 1, mean)
+```
+
+## Data frames
+
+### Reading in your own data
+
+One of the most basic things you will need to do in R is read in your own data set. 
+You can read in Excel files, simple text files, and even files from Google Sheets.
+But the easiest type of file to read in is a comma separated values (CSV) file. 
+You can save an Excel workbook (or Numbers workbook or Google Sheet) as a CSV file by using the "Save as ..." menu item. 
+
+Let's read in the soil data from our Speed Data Science activity.
+
+```{r soil_data}
+soil_data <- read.csv("https://mlammens.github.io/ESA2019-BEDENet/docs/soil_nutrient_data.csv")
+```
+
+
+Let's have a brief look at this data set.
+
+```{r}
+head(soil_data)
+tail(soil_data)
+```
+
+As we saw in our previous activitiy, these data include nutrient measurements at multiple different sites on a suburban campus. 
+The data set also includes information about the data samples were collected and the conditions of the site during collection.
+
+#### `summary` function
+
+Let's begin by using the `summary` function to examine this data set.
+`summary` returns many of the standard statistics.
+When doing data exploration, a few things you want to look at are:
+
+* How do the mean and median values within a variable compare?
+* Do the min and max values suggest there are outliers?
+* Which variables (i.e., columns) are quantitative (numeric) versus categorical (factors or characters)
+
+```{r}
+summary(soil_data)
+```
+
+#### Aside: Differences between characters and factors
+
+The data type **factors** 'appear' to be similar to characters, but are in fact coded numerically in R. 
+Think of **factors** like **categories**. 
+Here's a quick example that demonstrates the difference in these two variable types that shows up when using `summary`.
+
+```{r}
+## Make a new iris dataset
+soil_data_new <- soil_data
+
+## Create a new column that treats species as a character, rather than a factor
+soil_data_new$site_char <- as.character(soil_data_new$site)
+
+## Run summary command
+summary(soil_data_new)
+```
+
+
+#### Aside: A (very) brief introduction to navigating a `data.frame`
+
+We will be very brief here. 
+I recommend checking out 
+[this Data Carpentry lesson](http://www.datacarpentry.org/R-ecology/03-data-frames.html) for more information.
+
+* Looking at specific `data.frame` elements. Use the *row* and *column* notation.
+
+Here is the 5th row, 3rd column (Site).
+**Note: We are using square brackets to index the `data.frame` and we *always* use row, column notation.**
+
+```{r}
+soil_data[5, 3]
+```
+
+* Looking at an entire column.
+
+Here are two ways to get the `pH` column.
+
+First, **note: we leave the row part blank, but still add the comma.**
+
+```{r}
+soil_data[ ,5]
+```
+
+Second, **use only the variable (column) name. Note the use of the `$` operator**
+
+```{r}
+soil_data$pH
+```
+
+* Looking at specific column entry
+
+This is another way to look at the 5th entry in the `pH` column.
+
+```{r}
+soil_data$pH[5]
+```
+
+* Looking at all entries for a given row.
+
+Here's all the entries for the 5th row.
+**Note: here we leave the column part blank, but still add the comma.**
+
+```{r}
+soil_data[5, ]
+```
+
+* Looking at a set of rows and/or columns.
+
+Here's all the entries in the 5th through 10th rows, 5th through 7th columns.
+**Note: we use the `:` operator to look at a range of value.**
+
+```{r}
+soil_data[5:10, 5:7]
+```
+
+* For `data.frame`s, if you do not use row, column notation, you will get only the columns back.
+
+```{r}
+head(soil_data[5:7])
+```
+
+***
+
+#### Challenge
+
+What am I going to get if I execute the command below?
+
+```{r, results='hide'}
+head(soil_data[c("site","phosphorus_lbacre")])
+```
+
+
+
+
