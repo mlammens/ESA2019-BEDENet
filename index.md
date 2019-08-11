@@ -43,8 +43,8 @@ Times are approximate.
 
 ### Data science for undergraduate biology and environmental science (9:00 AM to 9:30 AM)
 
-* [Activity: What is Data Science?](docs/ESA2019ThinkGroupShare.pptx)
-* [Short Presentation: Data Science Fundamentals](docs/ESA2019DataScienceFundamentals.pptx)
+* Activity: [What is Data Science?](docs/ESA2019ThinkGroupShare.pptx)
+* Short Presentation: [Data Science Fundamentals](docs/ESA2019DataScienceFundamentals.pptx)
 
 ### Methods and tools for teaching data science in your classroom (9:30 AM to 12:00 Noon)
 

@@ -5,7 +5,7 @@ output: html_document
 
 Marisa was interested in whether some vegetation types were 'better' than others at taking up excessive nutrients in storm water runoff at Pace University. 
 These excess nutrients, often the result of fertilizer use or other contaminants that get into the water cycle during rain events, can have serious negative consequences on water bodies, causing eutrophication and dead-zones. 
-She measured pH, Nitrate, and Phosphorus at five different sites on the Pace campus, at three different sites (each with different vegetation types). 
+She measured pH, Nitrate, and Phosphorus at five different sites on the Pace campus (each with different vegetation types). 
 The data are below.
 
 | date    | condition | site        | replicate | pH  | nitrate_lbacre | phosphorus_lbacre |
