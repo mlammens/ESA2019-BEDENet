@@ -351,7 +351,7 @@ head(soil_data)
 tail(soil_data)
 ```
 
-As we saw in our previous activitiy, these data include nutrient measurements at multiple different sites on a suburban campus. 
+As we saw in our previous activity, these data include nutrient measurements at multiple different sites on a suburban campus. 
 The data set also includes information about the data samples were collected and the conditions of the site during collection.
 
 #### `summary` function
@@ -459,6 +459,62 @@ What am I going to get if I execute the command below?
 head(soil_data[c("site","phosphorus_lbacre")])
 ```
 
+## Basic data visualization
 
+There are many data visualization tools in R, and a very rich ecosystem of add-on [packages](https://cran.r-project.org/web/packages/index.html) that make it easy to create publication ready figures.
+Here we will learn a few basic visualization tools.
 
+### Historgrams
+
+Let's make a histogram of some of the nutrient data
+
+```{r}
+hist(soil_data$pH, breaks = 10)
+```
+
+Next let's make a scatter plot, showing pH versus phosphorus.
+
+```{r}
+plot(x = soil_data$pH, y = soil_data$phosphorus_lbacre)
+```
+
+Lastly, let's make a box plot. **Note that the syntax of our function call is a bit different than above.** 
+Here we are using the `~` to say "make phosphorus a function of site".
+
+```{r}
+boxplot(soil_data$phosphorus_lbacre ~ soil_data$site)
+```
+
+***
+
+#### Challenge
+
+Using R, remake one of the plots your group worked on during the Speed Data Science activity.
+
+***
+
+## Instructor's Notes
+
+This lesson utilizes **live coding**. 
+While the learners should be made aware of the existence of this document, both the instructor and the learner should work on all coding as if this document was being created from scratch.
+Also, the instructor and students should both be working in a new *.R script file.
+
+## Learning Outcomes
+
+At the end of this session you should be able to:
+
+* Perform basic arithmetic using R/RStudio
+* Identify the major components of the RStudio interface
+* Create an R script file and use it to document a sequence of R functions
+* Read in a data set and perform basic data summary procedures in R
+
+## Assessment
+
+Assessment for live coding is based on the learners performance on successfully carrying out **Challenges**. 
+This is primarily a **formative assessment**. 
+A **summative assessment** could be incorporated as an in-class analysis lab or as part of a homework assignment.
+
+## Learning Activities
+
+Live-coding using a data set relevant to the course content. In this case, these data could be associated with a Plant Ecology course or an undergraduate research course.
 
