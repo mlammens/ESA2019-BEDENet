@@ -260,6 +260,21 @@ git config --global user.name &quot;Your Name&quot;</code></pre>
 <p>Git has rich functionality for rolling back changes you have committed, allowing you to go back to previous versions of your files. However, here we are only going to scratch the surface of that functionality using the R Studio interface.</p>
 <p>Using the Git -&gt; History interface, you can select a past commit (i.e., version). For the file(s) changed in that commit, you can view those changes as we did above. Looking at the file changes, you will see in the upper-right corner a link to ‘View file <span class="citation">@xxxxxx</span>’, where xxxxxx is a string of numbers and letters. Selecting that link will allow you view the file as it was at that commit. You can then select the ‘Save As’ button, and use this file to make changes to the current version.</p>
 </div>
+<div id="going-remote---github" class="section level2">
+<h2>Going remote - GitHub</h2>
+<p>Let’s make the transition from Git to GitHub.</p>
+<ul>
+<li>Log on to GitHub and navigate to your ‘Repositories’ section.</li>
+<li>Create a ‘New’ repository (near to the upper right corner).</li>
+<li>When you create a new repository, you will get some helpful information to link your R Studio Cloud project with your GitHub repo. We’ll walk through this as a group.
+<ul>
+<li>In Terminal</li>
+<li>Execute <code>git remote add origin https://github.com/[username]/[reponame].git</code></li>
+<li>Execute <code>git push -uorigin master</code></li>
+</ul></li>
+</ul>
+<p>Now your repo has the documents from your computer in it!</p>
+</div>
 
 
 
