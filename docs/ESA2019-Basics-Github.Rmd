@@ -74,3 +74,8 @@ Make another new file (text file, R script, Rmd file, etc.) and commit that file
 
 **Note:** if you try to create a new R Markdown file, you may need to update packages and/or allow R Studio to restart.
 
+## Retrieving older versions of a file
+
+Git has rich functionality for rolling back changes you have committed, allowing you to go back to previous versions of your files. However, here we are only going to scratch the surface of that functionality using the R Studio interface. 
+
+Using the Git -> History interface, you can select a past commit (i.e., version). For the file(s) changed in that commit, you can view those changes as we did above. Looking at the file changes, you will see in the upper-right corner a link to 'View file @xxxxxx', where xxxxxx is a string of numbers and letters. Selecting that link will allow you view the file as it was at that commit. You can then select the 'Save As' button, and use this file to make changes to the current version.
